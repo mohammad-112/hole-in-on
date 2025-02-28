@@ -9,8 +9,6 @@ document.getElementById('contact-form')?.addEventListener('submit', function(eve
     alert('تم استلام رسالتك بنجاح!');
 });
 
-
-
 // أكواد العدسة المكبرة
 const magnifierIcon = document.getElementById('magnifier-icon');
 let isMagnifying = false;
@@ -56,4 +54,12 @@ myAudio?.addEventListener('error', (error) => {
 
 myAudio?.addEventListener('loadeddata', () => {
     console.log('Audio loaded successfully');
+});
+
+// قائمة التنقل المتجاوبة
+const menuToggle = document.querySelector('.menu-toggle');
+const navUl = document.querySelector('nav ul');
+
+menuToggle?.addEventListener('click', () => {
+    navUl.classList.toggle('active');
 });
