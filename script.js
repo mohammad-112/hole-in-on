@@ -22,7 +22,7 @@ magnifierIcon?.addEventListener('click', () => {
         resetMagnification();
     }
 });
- 
+
 function magnifyElement(event) {
     if (isMagnifying) {
         resetMagnification();
@@ -41,19 +41,7 @@ const playSoundButton = document.getElementById('playSoundButton');
 const myAudio = document.getElementById('myAudio');
 
 playSoundButton?.addEventListener('click', () => {
-    myAudio.play().catch(error => {
-        console.error('Error playing audio:', error);
-        alert('حدث خطأ أثناء تشغيل الصوت. يرجى التأكد من أن ملف الصوت موجود.');
-    });
-});
-
-myAudio?.addEventListener('error', (error) => {
-    console.error('Audio load error:', error);
-    alert('حدث خطأ أثناء تحميل ملف الصوت. يرجى التأكد من أن الملف موجود.');
-});
-
-myAudio?.addEventListener('loadeddata', () => {
-    console.log('Audio loaded successfully');
+    myAudio.play();
 });
 
 // قائمة التنقل المتجاوبة
