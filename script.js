@@ -22,7 +22,7 @@ magnifierIcon?.addEventListener('click', () => {
         resetMagnification();
     }
 });
-
+ 
 function magnifyElement(event) {
     if (isMagnifying) {
         resetMagnification();
