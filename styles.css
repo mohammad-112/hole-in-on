@@ -171,3 +171,49 @@ footer {
 #playSoundButton:hover {
     background-color: #93f9b9;
 }
+
+/* قائمة التنقل المتجاوبة */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    text-align: center;
+}
+
+nav ul.active li {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {  display: flex;  }
+    nav ul {  display: none;  }
+    nav ul.active {  display: flex;  flex-direction: column;  position: absolute;  top: 60px;  right: 0;  background-color: rgba(0, 0, 0, 0.8);  width: 100%;  text-align: center;  }
+}
